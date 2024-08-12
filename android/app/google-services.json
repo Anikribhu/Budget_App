@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "1094707234937",
+    "project_id": "budget-app-f485a",
+    "storage_bucket": "budget-app-f485a.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1094707234937:android:2b5f0c07f8d7bf23916ca8",
+        "android_client_info": {
+          "package_name": "com.csbs.budgetbuddy"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjJvLpdbNODnX4proLzphDA-6gNpit7IU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
