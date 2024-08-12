@@ -4,7 +4,9 @@ export const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
     padding: 20,
+    paddingTop:0,
     backgroundColor: '#F8F9FA', 
+    justifyContent:"center"
   },
   input: {
     borderWidth: 1,

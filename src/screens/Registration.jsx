@@ -7,6 +7,7 @@ import { createUserWithEmailAndPassword } from 'firebase/auth';
 export default function Registration({ navigation }) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
+  const [user, setUser] = useState('')
 
   const handleRegistration = async () => {
     try {
@@ -19,6 +20,14 @@ export default function Registration({ navigation }) {
 
   return (
     <View style={globalStyles.container}>
+      <TextInput
+        style={globalStyles.input}
+        placeholder="User Name"
+        value={user}
+        onChangeText={setUser}
+        keyboardType="user"
+        autoCapitalize="none"
+      />
       <TextInput
         style={globalStyles.input}
         placeholder="Email"

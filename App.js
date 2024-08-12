@@ -16,7 +16,7 @@ export default function App() {
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Onboarding">
         <Stack.Screen name="Onboarding" component={Onboarding} options={{ headerShown: false }} />
-        <Stack.Screen name="Registration" component={Registration} />
+        <Stack.Screen name="Registration" component={Registration}  />
         <Stack.Screen name="Login" component={Login} />
         <Stack.Screen name="Welcome" component={Welcome} />
         <Stack.Screen name="Homepage" component={Homepage} />
