@@ -1,20 +1,23 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
+// App.js
+import React from 'react';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
+import Dashboard from './components/Dashboard';
+import AddExpense from './components/AddExpense';
+import SavingGoals from './components/SavingGoals';
+import EditExpense from './components/EditExpense'; 
+
+const Stack = createStackNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+    <NavigationContainer>
+      <Stack.Navigator initialRouteName="Dashboard">
+        <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'Expense Tracker' }} />
+        <Stack.Screen name="AddExpense" component={AddExpense} options={{ title: 'Add Expense' }} />
+        <Stack.Screen name="SavingGoals" component={SavingGoals} options={{ title: 'Saving Goals' }} />
+        <Stack.Screen name="EditExpense" component={EditExpense} options={{ title: 'Edit Expense' }} />
+      </Stack.Navigator>
+    </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
