@@ -22,7 +22,7 @@ const ExpenseItem = ({ item, onEdit, onRemove }) => (
     <View style={styles.expenseDetails}>
       <Text style={styles.expenseDescription}>{item.description}</Text>
       <Text style={[styles.expenseAmount, { color: item.amount >= 0 ? "red" : "green" }]}>
-        ${Math.abs(item.amount).toFixed(2)}
+        ₹{Math.abs(item.amount).toFixed(2)}
       </Text>
     </View>
     <View style={styles.timestampContainer}>
@@ -67,7 +67,11 @@ const Dashboard = ({ navigation }) => {
   };
 
   const handleEditExpense = (expense) => {
-    navigation.navigate('EditExpense', { expense });
+    const expenseWithDateString = {
+      ...expense,
+      date: expense.date.toISOString(), 
+    };
+    navigation.navigate('EditExpense', { expense: expenseWithDateString });
   };
 
   const handleRemoveExpense = (id) => {
@@ -127,7 +131,7 @@ const Dashboard = ({ navigation }) => {
       <View style={styles.totalExpenseContainer}>
         <Ionicons name="wallet-outline" size={48} color="#4a4a4a" />
         <Text style={styles.totalExpenseText}>Total Expense</Text>
-        <Text style={styles.totalExpenseAmount}>${totalExpense.toFixed(2)}</Text>
+        <Text style={styles.totalExpenseAmount}>₹{totalExpense.toFixed(2)}</Text>
       </View>
       <TouchableOpacity
         style={styles.button}

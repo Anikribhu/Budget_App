@@ -35,7 +35,7 @@ const AddExpense = ({ navigation }) => {
     <View style={styles.container}>
       <TextInput
         style={styles.input}
-        placeholder="Amount"
+        placeholder="Amount (₹)"
         keyboardType="numeric"
         value={amount}
         onChangeText={setAmount}
