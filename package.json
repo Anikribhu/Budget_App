@@ -1,5 +1,5 @@
 {
-  "name": "budget-app",
+  "name": "expense-tracker",
   "version": "1.0.0",
   "main": "expo/AppEntry.js",
   "scripts": {
@@ -10,11 +10,12 @@
   },
   "dependencies": {
     "@react-native-async-storage/async-storage": "1.23.1",
+    "@react-native-community/masked-view": "^0.1.11",
+    "@react-native-picker/picker": "^2.7.7",
     "@react-navigation/native": "^6.1.18",
     "@react-navigation/stack": "^6.4.1",
-    "expo": "^51.0.26",
+    "expo": "~51.0.26",
     "expo-status-bar": "~1.12.1",
-    "firebase": "^10.12.5",
     "react": "18.2.0",
     "react-native": "0.74.5",
     "react-native-gesture-handler": "~2.16.1",
