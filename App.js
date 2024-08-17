@@ -13,7 +13,7 @@ export default function App() {
   return (
     <NavigationContainer>
       <Stack.Navigator initialRouteName="Dashboard">
-        <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'Expense Tracker' }} />
+        <Stack.Screen name="Dashboard" component={Dashboard} options={{ title: 'Xpenzer' }} />
         <Stack.Screen name="AddExpense" component={AddExpense} options={{ title: 'Add Expense' }} />
         <Stack.Screen name="SavingGoals" component={SavingGoals} options={{ title: 'Saving Goals' }} />
         <Stack.Screen name="EditExpense" component={EditExpense} options={{ title: 'Edit Expense' }} />
