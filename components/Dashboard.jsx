@@ -69,7 +69,7 @@ const Dashboard = ({ navigation }) => {
   const handleEditExpense = (expense) => {
     const expenseWithDateString = {
       ...expense,
-      date: expense.date.toISOString(), 
+      date: expense.date.toISOString(),
     };
     navigation.navigate('EditExpense', { expense: expenseWithDateString });
   };
@@ -155,25 +155,28 @@ const Dashboard = ({ navigation }) => {
       <FlatList
         data={expenses}
         renderItem={({ item }) => (
-          <ExpenseItem 
-            item={item} 
-            onEdit={handleEditExpense} 
-            onRemove={handleRemoveExpense} 
+          <ExpenseItem
+            item={item}
+            onEdit={handleEditExpense}
+            onRemove={handleRemoveExpense}
           />
         )}
         keyExtractor={item => item.id.toString()}
         ListHeaderComponent={ListHeader}
         contentContainerStyle={styles.listContent}
       />
-      <TouchableOpacity
-        style={styles.removeAllButton}
-        onPress={handleRemoveAllExpenses}
-      >
-        <Ionicons name="trash-outline" size={24} color="#ffffff" />
-      </TouchableOpacity>
+      {expenses.length > 0 && (
+        <TouchableOpacity
+          style={styles.removeAllButton}
+          onPress={handleRemoveAllExpenses}
+        >
+          <Ionicons name="trash-outline" size={24} color="#ffffff" />
+        </TouchableOpacity>
+      )}
     </View>
   );
 };
+
 
 const styles = StyleSheet.create({
   container: {
