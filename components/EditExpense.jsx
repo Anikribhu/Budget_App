@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { View, Text, TextInput, TouchableOpacity, StyleSheet, Alert } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { Ionicons } from '@expo/vector-icons';
+import { LinearGradient } from 'expo-linear-gradient';
 
 const EditExpense = ({ route, navigation }) => {
   const { expense } = route.params;
@@ -27,7 +28,9 @@ const EditExpense = ({ route, navigation }) => {
   };
 
   return (
-    <View style={styles.container}>
+    <LinearGradient colors={['#24293E','#2d3860']} style={styles.container}>
+
+    <View >
       <TextInput
         style={styles.input}
         placeholder="Description"
@@ -46,6 +49,7 @@ const EditExpense = ({ route, navigation }) => {
         <Text style={styles.buttonText}>Save</Text>
       </TouchableOpacity>
     </View>
+    </LinearGradient>
   );
 };
 
@@ -66,7 +70,7 @@ const styles = StyleSheet.create({
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#007AFF',
+    backgroundColor: '#8EBBFF',
     padding: 15,
     borderRadius: 10,
   },

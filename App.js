@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Dashboard from './components/Dashboard';
 import AddExpense from './components/AddExpense';
 import SavingGoals from './components/SavingGoals';
-import EditExpense from './components/EditExpense'; 
+import EditExpense from './components/EditExpense';
 
 const Stack = createStackNavigator();
 
